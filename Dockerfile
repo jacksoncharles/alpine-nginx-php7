@@ -15,6 +15,7 @@ RUN apk --update add php7 \
 		     php7-gd \
 		     php7-intl \
 		     php7-sqlite3 \
+		     php7-pdo_sqlite \
 		     php7-pgsql \
 		     php7-xml \
 		     php7-xsl \
