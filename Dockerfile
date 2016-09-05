@@ -1,11 +1,12 @@
 FROM alpine:latest
-MAINTAINER Kevin Holmes <kevin.holmes@tjmorris.co.uk>
+MAINTAINER Charles Jackson <charles.jackson@tjmorris.co.uk>
 
 RUN apk add --update bash && rm -rf /var/cache/apk/*
 
 # Install packages
 RUN apk --update add php7 \ 
                      php7-fpm \
+                     php7-session \
 		     php7-pdo \
 		     php7-pdo_mysql \
 		     php7-mcrypt \
@@ -25,7 +26,7 @@ RUN apk --update add php7 \
 		     php7-soap \
 		     php7-dom \
                      nginx \
-                     supervisor --repository http://nl.alpinelinux.org/alpine/edge/testing/
+                     supervisor --repository http://nl.alpinelinux.org/alpine/edge/community/
 
 RUN mkdir -p /run/nginx
 
